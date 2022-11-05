@@ -1,5 +1,5 @@
 total = int(input("Masukkan Total Belanja : "))
-member = input("Apakah anda member? (y/t)")
+member = input("Apakah Anda Member? (y/t)")
 
 if member==("y"):
     if(total>=500000 and total<=1000000):
