@@ -1,33 +1,22 @@
-total = int(input("Masukkan Total Belanja : "))
-member = input("Apakah Anda Member? (y/t)")
+totalbelanja = int(input("Masukan total belanja: "))
+member = int(input("Apakah anda mempunyai member?\nketik 1 jika anda mempunyai member\nketik 0 jika tidak mempunyai member\n"))
 
-if member==("y"):
-    if(total>=500000 and total<=1000000):
-        print("\nSelamat anda mendapatkan diskon 7%")
-        new_total = total * (0.07)
-        diskon1 = total-new_total
-        print("\nTotal belanja anda adalah : ",diskon1)
-    elif(total>1000000):
-        print("\nSelamat anda mendapatkan diskon 8%")
-        new_total = total * (0.08)
-        diskon2 = total-new_total
-        print("\nTotal belanja anda adalah : ",diskon2)
+diskon1 = int(totalbelanja-(totalbelanja*(5/100)))
+diskon2 = int(totalbelanja-(totalbelanja*(2/100)))
+diskon3 = int(totalbelanja-(totalbelanja*(3/100)))
+diskon4 = int(totalbelanja-(totalbelanja*(7/100)))
+diskon5 = int(totalbelanja-(totalbelanja*(8/100)))
+if member == 1:
+    if totalbelanja >= 500000 and totalbelanja <= 1000000:
+        print("Anda mendapat diskon sebesar 7% sehingga total belanjaan anda menjadi: Rp.",diskon4)
+    elif totalbelanja > 1000000:
+        print("Anda mendapat diskon sebesar 8% sehingga total belanjaan anda menjadi: Rp.",diskon5)
     else:
-        print("\nSelamat anda mendapatkan diskon 5%")
-        new_total = total*(0.05)
-        diskon3 = total-new_total
-        print("\nTotal belanja anda adalah : ",diskon3)
-
-elif member==("t"):
-    if(total>=500000 and total<=1000000):
-        print("\nSelamat anda mendapatkan diskon 2%")
-        new_total = total * (0.02)
-        diskon4 = total-new_total
-        print("\nTotal belanja anda adalah : ",diskon4)
-    elif(total>1000000):
-        print("\nSelamat anda mendapatkan diskon 3%")
-        new_total = total * (0.03)
-        diskon5 = total-new_total
-        print("\nTotal belanja anda adalah : ",diskon5)
+        print("Anda mendapat diskon sebesar 5% sehingga total belanjaan anda menjadi: Rp.",diskon1)
 else:
-    print("Data tidak ditemukan")
+    if totalbelanja >= 500000 and totalbelanja <= 1000000:
+        print("Anda mendapat diskon sebesar 2% sehingga total belanjaan anda menjadi: Rp.",diskon2)
+    elif totalbelanja > 1000000:
+        print("Anda mendapat diskon sebesar 3% sehingga total belanjaan anda menjadi: Rp.",diskon3)
+    else:
+        print("Anda tidak mendapat diskon apapun")
