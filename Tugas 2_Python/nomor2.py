@@ -13,10 +13,12 @@ if member == 1:
         print("Anda mendapat diskon sebesar 8% sehingga total belanjaan anda menjadi: Rp.",diskon5)
     else:
         print("Anda mendapat diskon sebesar 5% sehingga total belanjaan anda menjadi: Rp.",diskon1)
-else:
+elif member == 0:
     if totalbelanja >= 500000 and totalbelanja <= 1000000:
         print("Anda mendapat diskon sebesar 2% sehingga total belanjaan anda menjadi: Rp.",diskon2)
     elif totalbelanja > 1000000:
         print("Anda mendapat diskon sebesar 3% sehingga total belanjaan anda menjadi: Rp.",diskon3)
     else:
         print("Anda tidak mendapat diskon apapun")
+else:
+    print("\nError")
