@@ -14,4 +14,4 @@ def telkom (seragam):
             print("Seragam anda hari ini bebas")
         case default:
             print("Data tidak ditemukan")
-print(telkom(input("Masukkan hari : ")))
+telkom(input("Masukkan hari : "))
